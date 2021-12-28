@@ -41,6 +41,7 @@ def transform():
 
     # filtro dataframe somente com pedidos entregues
     df_orders = df_orders.query("order_status=='delivered'")
+    df_orders.drop(columns=['order_status'], axis=1, inplace=True)
 
     df = df_orders.copy()
     # lista de colunas para conversção em datetime
