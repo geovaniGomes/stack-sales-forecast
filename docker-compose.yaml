@@ -159,7 +159,6 @@ services:
           echo "Please follow the instructions to increase amount of resources available:"
           echo "   https://airflow.apache.org/docs/apache-airflow/stable/start/docker.html#before-you-begin"
         fi
-
         chmod -R 777 sales_forecast/
         chmod -R 777 sales_forecast/datalake/
         exec /entrypoint airflow version

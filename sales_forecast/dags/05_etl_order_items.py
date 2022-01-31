@@ -41,8 +41,6 @@ def transform():
     df = df_order_items.copy()
 
     df.rename(columns={'order_item_id': 'quantity'}, inplace=True)
-    df.drop(columns=['seller_id'], axis=1, inplace=True)
-
     df.to_csv("/tmp/order_items.csv", index=False)
 
 def load():
